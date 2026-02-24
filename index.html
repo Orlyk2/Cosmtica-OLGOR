@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cosméticos Premium | Belleza y Seducción</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+
+/* 🔥 FONDO FEMENINO ANIMADO */
+body{
+  background:linear-gradient(135deg,#2b001f,#5a003c,#8a004f,#c2185b);
+  background-size:400% 400%;
+  animation:fondoAnimado 15s ease infinite;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+@keyframes fondoAnimado{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* 🌟 MENÚ FLOTANTE */
+.menu-container{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+  animation:menuEntrada 1.2s ease;
+}
+
+@keyframes menuEntrada{
+  from{opacity:0;transform:translate(-50%,-40px)}
+  to{opacity:1;transform:translate(-50%,0)}
+}
+
+.menu-select{
+  appearance:none;
+  padding:15px 30px;
+  border-radius:50px;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  color:#fff;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(15px);
+  box-shadow:0 0 30px rgba(255,0,128,.6);
+  transition:.4s;
+}
+
+.menu-select:hover{
+  background:linear-gradient(90deg,#ff4da6,#ff80bf);
+  transform:scale(1.08);
+  box-shadow:0 0 50px rgba(255,0,128,1);
+}
+
+/* HEADER */
+header{
+  padding:180px 20px 120px;
+  text-align:center;
+}
+
+header h1{
+  font-size:48px;
+  background:linear-gradient(90deg,#ff4da6,#ffffff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:fadeDown 1.2s ease;
+}
+
+header p{
+  margin:20px 0 30px;
+  opacity:.9;
+  animation:fadeUp 1.5s ease;
+}
+
+/* BOTÓN PRINCIPAL */
+.cta{
+  display:inline-block;
+  background:linear-gradient(135deg,#ff0080,#ff4da6);
+  padding:15px 40px;
+  border-radius:999px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.4s;
+  box-shadow:0 10px 30px rgba(255,0,128,.6);
+}
+
+.cta:hover{
+  transform:translateY(-6px) scale(1.08);
+  box-shadow:0 15px 50px rgba(255,0,128,1);
+}
+
+/* PRODUCTOS */
+section{padding:80px 20px}
+.container{max-width:1200px;margin:auto}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px;
+}
+
+.product-card{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(15px);
+  border-radius:25px;
+  overflow:hidden;
+  transition:.6s;
+  box-shadow:0 0 30px rgba(255,0,128,.3);
+  animation:fadeUp 1.5s ease;
+}
+
+.product-card:hover{
+  transform:translateY(-15px) scale(1.05);
+  box-shadow:0 0 60px rgba(255,0,128,.9);
+}
+
+.media img{
+  width:100%;
+  transition:1s;
+}
+
+.product-card:hover img{
+  transform:scale(1.15);
+  filter:brightness(1.2);
+}
+
+.content{
+  padding:25px;
+  text-align:center;
+}
+
+.content h3{
+  color:#ffb3d9;
+  margin-bottom:15px;
+}
+
+.content p{
+  margin-bottom:20px;
+  opacity:.9;
+}
+
+/* 📲 BOTÓN WHATSAPP FLOTANTE */
+.whatsapp-float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:70px;
+  height:70px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 0 25px rgba(37,211,102,.7);
+  animation:whatsappPulse 2s infinite;
+  z-index:1000;
+}
+
+@keyframes whatsappPulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}
+  70%{box-shadow:0 0 0 25px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+
+/* Animaciones */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENÚ FLOTANTE -->
+<div class="menu-container">
+<select class="menu-select" onchange="location = this.value">
+  <option value="#">💄 Elige tu producto</option>
+  <option value="labiales.html">Labiales</option>
+  <option value="sombras.html">Sombras</option>
+  <option value="pestanina.html">Pestañina</option>
+  <option value="base.html">Base Líquida</option>
+  <option value="kit-facial.html">Kit Facial</option>
+</select>
+</div>
+
+<header>
+<h1>Despierta tu lado más irresistible ✨</h1>
+<p>Cosméticos diseñados para realzar tu belleza y confianza</p>
+<a href="https://wa.me/573136299375" class="cta">Comprar ahora</a>
+</header>
+
+<section>
+<div class="container grid">
+
+<div class="product-card">
+<div class="media">
+<img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa">
+</div>
+<div class="content">
+<h3>Base Líquida Profesional 💄</h3>
+<p>Acabado sedoso y cobertura perfecta.</p>
+<a class="cta" href="https://wa.me/573136299375">Pedir ahora</a>
+</div>
+</div>
+
+<div class="product-card">
+<div class="media">
+<!-- Nueva imagen más femenina -->
+<img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30">
+</div>
+<div class="content">
+<h3>Sombras Deluxe ✨</h3>
+<p>Tonos elegantes que resaltan tu mirada.</p>
+<a class="cta" href="https://wa.me/573136299375">Ver más</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 · Cosméticos Premium · Belleza que seduce
+</footer>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/573136299375" class="whatsapp-float">💬</a>
+
+</body>
+</html>
