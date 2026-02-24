@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pestañina Volumen</title>
+
+<style>
+body{
+  font-family:Segoe UI;
+  margin:0;
+  background:#fff;
+}
+
+/* MENÚ FLOTANTE */
+.menu-container{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+}
+
+.menu-select{
+  appearance:none;
+  padding:12px 28px;
+  border-radius:50px;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  color:#fff;
+  background:#111827;
+  box-shadow:0 0 25px rgba(0,0,0,.3);
+  transition:.3s;
+}
+
+.menu-select:hover{
+  background:#374151;
+}
+
+/* HEADER */
+header{
+  background:#111827;
+  color:#fff;
+  padding:80px;
+  text-align:center;
+}
+
+/* CONTENEDOR DE PRODUCTO */
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.card{
+  box-shadow:0 15px 40px rgba(0,0,0,.1);
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 20px 50px rgba(0,0,0,.2);
+}
+
+img{
+  width:100%;
+  border-radius:15px;
+  transition:.5s;
+}
+
+.card:hover img{
+  transform:scale(1.1);
+  filter:brightness(1.15);
+}
+
+.cta{
+  display:inline-block;
+  margin-top:20px;
+  background:#111827;
+  color:#fff;
+  padding:12px 30px;
+  border-radius:999px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.cta:hover{
+  background:#374151;
+}
+
+/* BOTÓN WHATSAPP FLOTANTE */
+.whatsapp-float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:65px;
+  height:65px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 0 25px rgba(37,211,102,.7);
+  animation:pulse 2s infinite;
+  z-index:1000;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}
+  70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENÚ FLOTANTE -->
+<div class="menu-container">
+<select class="menu-select" onchange="location = this.value">
+  <option value="#">💄 Navegar</option>
+  <option value="index.html">🏠 Inicio</option>
+  <option value="labiales.html">Labiales</option>
+  <option value="sombras.html">Sombras</option>
+  <option value="pestanina.html">Pestañina</option>
+  <option value="base.html">Base Líquida</option>
+  <option value="kit-facial.html">Kit Facial</option>
+  <option value="quienes-somos.html">Quiénes Somos</option>
+</select>
+</div>
+
+<header>
+<h1>👁 Pestañina Volumen Extremo</h1>
+<p>Mirada intensa y definida</p>
+</header>
+
+<div class="container">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30">
+<h2>Máscara de Pestañas Premium</h2>
+<p>Alarga, define y da volumen sin grumos.</p>
+<a class="cta" href="https://wa.me/573136299375">Comprar</a>
+</div>
+</div>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/573136299375" class="whatsapp-float">💬</a>
+
+</body>
+</html>
