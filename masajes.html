@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masajes Premium</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+
+/* 🌸 FONDO SUAVE */
+body{
+  background:linear-gradient(135deg,#ffdee9,#b5fffc,#f7d6e0,#ffc3a0);
+  background-size:400% 400%;
+  animation:fondoAnimado 15s ease infinite;
+  color:#1f2933;
+  overflow-x:hidden;
+}
+
+@keyframes fondoAnimado{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* 🌟 MENÚ FLOTANTE */
+.menu-container{
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:1000;
+  animation:menuEntrada 1.2s ease;
+}
+
+@keyframes menuEntrada{
+  from{opacity:0;transform:translate(-50%,-40px)}
+  to{opacity:1;transform:translate(-50%,0)}
+}
+
+.menu-select{
+  appearance:none;
+  padding:15px 30px;
+  border-radius:50px;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  color:#fff;
+  background:rgba(0,0,0,0.15);
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 25px rgba(0,0,0,.5);
+  transition:.4s;
+}
+
+.menu-select:hover{
+  background:linear-gradient(90deg,#ff7eb9,#ff758c);
+  transform:scale(1.08);
+  box-shadow:0 0 40px rgba(255,0,128,0.8);
+}
+
+/* HEADER */
+header{
+  padding:140px 20px 80px;
+  text-align:center;
+}
+
+header h1{
+  font-size:42px;
+  background:linear-gradient(90deg,#ff758c,#ffe29f);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:fadeDown 1.2s ease;
+}
+
+header p{
+  margin:20px 0 30px;
+  opacity:.9;
+  animation:fadeUp 1.5s ease;
+}
+
+/* PRODUCTOS / SERVICIOS */
+section{padding:60px 20px}
+.container{max-width:1200px;margin:auto}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.product-card{
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  overflow:hidden;
+  transition:.5s;
+  box-shadow:0 0 20px rgba(0,0,0,.15);
+}
+
+.product-card:hover{
+  transform:translateY(-10px) scale(1.05);
+  box-shadow:0 0 40px rgba(255,0,128,.5);
+}
+
+.media img{
+  width:100%;
+  transition:1s;
+  border-radius:15px;
+}
+
+.product-card:hover img{
+  transform:scale(1.1);
+  filter:brightness(1.1);
+}
+
+.content{
+  padding:20px;
+  text-align:center;
+}
+
+.content h3{
+  color:#ff758c;
+  margin-bottom:10px;
+}
+
+.content p{
+  opacity:.85;
+  margin-bottom:15px;
+}
+
+.cta{
+  display:inline-block;
+  background:linear-gradient(135deg,#ff7eb9,#ff758c);
+  padding:12px 30px;
+  border-radius:999px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.cta:hover{
+  transform:translateY(-4px) scale(1.05);
+  box-shadow:0 0 30px rgba(255,0,128,0.6);
+}
+
+/* BOTÓN WHATSAPP FLOTANTE */
+.whatsapp-float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:70px;
+  height:70px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  color:#fff;
+  text-decoration:none;
+  box-shadow:0 0 25px rgba(37,211,102,.7);
+  animation:whatsappPulse 2s infinite;
+  z-index:1000;
+}
+
+@keyframes whatsappPulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}
+  70%{box-shadow:0 0 0 25px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+
+/* Animaciones */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENÚ FLOTANTE -->
+<div class="menu-container">
+  <select class="menu-select" onchange="location=this.value">
+    <option value="#">💆 Navegar</option>
+    <option value="index.html">🏠 Inicio</option>
+    <option value="labiales.html">Labiales</option>
+    <option value="sombras.html">Sombras</option>
+    <option value="pestanina.html">Pestañina</option>
+    <option value="base.html">Base Líquida</option>
+    <option value="kit-facial.html">Kit Facial</option>
+    <option value="masajes.html">Masajes</option>
+    <option value="deluxe.html">Deluxe</option>
+  </select>
+</div>
+
+<header>
+<h1>💆 Masajes Premium</h1>
+<p>Relájate, desconéctate y consiente tu cuerpo</p>
+</header>
+
+<section>
+<div class="container grid">
+
+<div class="product-card">
+<div class="media">
+<img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a5">
+</div>
+<div class="content">
+<h3>Masaje Relajante</h3>
+<p>Ideal para liberar tensiones y estrés.</p>
+<a class="cta" href="https://wa.me/573136299375">Reservar</a>
+</div>
+</div>
+
+<div class="product-card">
+<div class="media">
+<img src="https://images.unsplash.com/photo-1600185364026-85b17ff51f95">
+</div>
+<div class="content">
+<h3>Masaje Terapéutico</h3>
+<p>Alivia dolores musculares y mejora la circulación.</p>
+<a class="cta" href="https://wa.me/573136299375">Reservar</a>
+</div>
+</div>
+
+<div class="product-card">
+<div class="media">
+<img src="https://images.unsplash.com/photo-1601988120536-41c536e5babb">
+</div>
+<div class="content">
+<h3>Masaje Aromático</h3>
+<p>Disfruta de aceites esenciales y una experiencia sensorial completa.</p>
+<a class="cta" href="https://wa.me/573136299375">Reservar</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 · Masajes Premium · Relájate y consiéntete
+</footer>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/573136299375" class="whatsapp-float">💬</a>
+
+</body>
+</html>
